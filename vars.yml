@@ -1,1 +1,3 @@
-
+APP_MEMORY: 350M
+INSTANCES: 2
+APP_NAME: sourabh-1
