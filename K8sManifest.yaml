@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{.Values.name}}-cm
+  name: metadata
 data:
   hello: world
   foo: bar
