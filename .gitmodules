@@ -1,0 +1,6 @@
+[submodule "automation/PipelinesNgAutomation"]
+	path = automation/PipelinesNgAutomation
+	url = https://github.com/wings-software/PipelinesNgAutomation
+[submodule "automation/automation"]
+	path = automation/automation
+	url = https://github.com/wings-software/PipelinesNgAutomation
