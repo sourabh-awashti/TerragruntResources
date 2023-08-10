@@ -1,0 +1,46 @@
+template:
+  name: setup
+  type: Step
+  projectIdentifier: kubernetesdeployment
+  orgIdentifier: default
+  spec:
+    type: ShellScript
+    timeout: 10m
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: |-
+            mkdir -p ~/.kube && touch config
+            cat << EOF > ~/.kube/config
+            apiVersion: v1
+            clusters:
+            - cluster:
+                certificate-authority-data: <+secrets.getValue(<+infra.variables.Kubernetes_connector.spec.credential.spec.auth.spec.caCertRef.identifier>)>
+                server: <+infra.variables.Kubernetes_connector.spec.credential.spec.masterUrl>
+              name: <+infra.variables.Cluster>
+            contexts:
+            - context:
+                cluster: <+infra.variables.Cluster>
+                user: <+infra.variables.Cluster>
+              name: <+infra.variables.Cluster>
+            current-context: <+infra.variables.Cluster>
+            kind: Config
+            preferences: {}
+            users:
+            - name: <+infra.variables.Cluster>
+              user:
+                token: <+secrets.getValue(<+infra.variables.Kubernetes_connector.spec.credential.spec.auth.spec.serviceAccountTokenRef.identifier>)>
+            EOF
+
+
+            cat ~/.kube/config
+            export KUBECONFIG=${HARNESS_KUBE_CONFIG_PATH}
+      environmentVariables: []
+      outputVariables: []
+      delegateSelectors:
+        - kubernetes-delegate
+  identifier: setup
+  versionLabel: v1

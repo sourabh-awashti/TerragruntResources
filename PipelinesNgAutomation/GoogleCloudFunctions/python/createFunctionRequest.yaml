@@ -1,0 +1,5 @@
+function:
+  name: gcf-python-helloworld-automation
+  buildConfig:
+    runtime: python310
+    entryPoint: hello_get

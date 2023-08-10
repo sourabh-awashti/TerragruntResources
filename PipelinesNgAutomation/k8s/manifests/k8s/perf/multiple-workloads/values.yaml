@@ -1,0 +1,10 @@
+name: <+stage.variables.resourceNamePrefix>
+replicas: 1
+
+image: <+artifact.image>
+#dockercfg: ${artifact.source.dockerconfig}
+
+#namespace: ${infra.kubernetes.namespace}
+namespace: <+infra.namespace>
+
+command: <+stage.variables.command>

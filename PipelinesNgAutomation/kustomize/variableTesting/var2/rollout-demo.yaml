@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: rollouts-demo
+spec:
+  selector:
+    matchLabels:
+      app: rollouts-demo
+  template:
+    metadata:
+      labels:
+        app: rollouts-demo
+    spec:
+      volumes:
+      - name: config-volume
+        configMap:
+          name: special-config
+      - name: secret-volume
+        secret:
+          secretName: rollouts-demo-secret

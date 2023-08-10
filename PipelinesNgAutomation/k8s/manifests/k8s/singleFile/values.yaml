@@ -1,0 +1,8 @@
+createNamespace: true
+#namespace: ${infra.kubernetes.namespace}
+namespace: <+infra.namespace>
+
+name: <+stage.variables.resourceNamePrefix>
+
+image: <+artifact.image>
+dockercfg: <+artifact.imagePullSecret>

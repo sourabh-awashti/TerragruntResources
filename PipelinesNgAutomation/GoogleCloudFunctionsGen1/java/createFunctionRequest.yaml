@@ -1,0 +1,8 @@
+function:
+  name: <+stage.variables.functionName>
+  runtime: java17
+  entryPoint: functions.HelloWorld
+  httpsTrigger:
+        securityLevel: SECURE_OPTIONAL
+
+

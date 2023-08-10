@@ -1,0 +1,70 @@
+containerDefinitions:
+- name: image_main
+  image: "<+artifact.image>"
+  links: []
+  portMappings:
+  - hostPort: 80
+    containerPort: 80
+    protocol: tcp
+  logConfiguration:
+    logDriver: awslogs
+    secretOptions:
+    options:
+      awslogs-group: "/aws/ecs/containerinsights/ecs-cluster-3/performance"
+      awslogs-region: us-east-1
+      awslogs-stream-prefix: ecs
+  memory: '512'
+  entryPoint: []
+  command: []
+  environment: []
+  mountPoints: []
+  volumesFrom: []
+  dependsOn: []
+  dnsServers: []
+  dnsSearchDomains: []
+  extraHosts: []
+  dockerSecurityOptions: []
+  ulimits: []
+  systemControls: []
+  resourceRequirements: []
+- name: image_sidecar
+  image: "<+pipeline.stages.ecs.spec.serviceConfig.output.artifactResults.sidecars.sidecar.image>"
+  links: []
+  portMappings:
+  - hostPort: 8080
+    containerPort: 8080
+    protocol: tcp
+  logConfiguration:
+    logDriver: awslogs
+    secretOptions:
+    options:
+      awslogs-group: "/aws/ecs/containerinsights/ecs-cluster-3/performance"
+      awslogs-region: us-east-1
+      awslogs-stream-prefix: ecs
+  memory: '512'
+  entryPoint: []
+  command: []
+  environment: []
+  mountPoints: []
+  volumesFrom: []
+  dependsOn: []
+  dnsServers: []
+  dnsSearchDomains: []
+  extraHosts: []
+  dockerSecurityOptions: []
+  ulimits: []
+  systemControls: []
+  resourceRequirements: []
+executionRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
+volumes: []
+requiresAttributes:
+- FARGATE
+networkMode: awsvpc
+taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
+family: task-sidecar
+placementConstraints: []
+compatibilities: []
+requiresCompatibilities: []
+cpu: '512'
+memory: '1024'
+inferenceAccelerators: []

@@ -1,0 +1,40 @@
+infrastructureDefinition:
+  name: ng-manager-dev
+  identifier: ngmanagerdev
+  description: ""
+  tags: {}
+  orgIdentifier: default
+  projectIdentifier: kubernetesdeployment
+  environmentRef: dev
+  deploymentType: CustomDeployment
+  type: CustomDeployment
+  spec:
+    customDeploymentRef:
+      templateRef: Ngmanager
+      versionLabel: V1
+    variables:
+      - name: DeploymentName
+        type: String
+        description: Name of the Deployment
+        value: <+input>
+      - name: Kubernetes_connector
+        type: Connector
+        description: K8s connector to connect to the infrastructure
+        value: <+input>
+      - name: GitToken
+        type: Secret
+        description: GitToken to fetch manifest files
+        value: <+input>
+      - name: Namespace
+        type: String
+        description: ""
+        value: <+input>
+      - name: Replicas
+        type: Number
+        description: Replicas for the Instance
+        value: <+input>
+      - name: Cluster
+        type: String
+        description: ""
+        value: <+input>
+  allowSimultaneousDeployments: true

@@ -1,0 +1,6 @@
+function:
+  name: "<+serviceVariables.functionName>"
+  runtime: php81
+  entryPoint: helloGet
+  httpsTrigger:
+    securityLevel: SECURE_OPTIONAL

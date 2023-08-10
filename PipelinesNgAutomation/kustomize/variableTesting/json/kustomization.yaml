@@ -1,0 +1,17 @@
+resources:
+- ingress.yaml
+- rollout-demo.yaml
+
+patches:
+- path: ingress_patch.json
+  target:
+    group: networking.k8s.io
+    version: v1beta1
+    kind: Ingress
+    name: my-ingress
+- path: deploy_patch.json
+  target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Rollout
+    name: rollouts-demo

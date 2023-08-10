@@ -1,0 +1,13 @@
+
+service:
+  type: ClusterIP
+  port: 80
+
+deployment:
+    container:
+      image: harness/todolist-sample:latest
+      name: todolist-container
+      port: 80
+
+global:
+  appName: <+stage.variables.resourcePrefix>-todolist-service

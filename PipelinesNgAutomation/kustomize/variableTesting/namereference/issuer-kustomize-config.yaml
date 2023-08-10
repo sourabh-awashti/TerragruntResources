@@ -1,0 +1,6 @@
+nameReference:
+- kind: Issuer
+  group: certmanager.k8s.io
+  fieldSpecs:
+    - kind: Ingress
+      path: metadata/annotations/certmanager.k8s.io\/issuer

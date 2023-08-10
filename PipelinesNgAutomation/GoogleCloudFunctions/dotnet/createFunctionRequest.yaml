@@ -1,0 +1,17 @@
+{
+"function":{
+  "name": "gcf-dotnet-helloworld-automation",
+  "buildConfig": {
+    "runtime": "dotnet6",
+    "entryPoint": "HelloWorld.Function"
+  },
+  "serviceConfig": {
+    "timeoutSeconds": 70,
+    "maxInstanceCount": 100,
+    "ingressSettings": "ALLOW_ALL",
+    "availableMemory": "256M",
+    "maxInstanceRequestConcurrency": 1,
+    "availableCpu": "0.1666"
+  }
+}
+}

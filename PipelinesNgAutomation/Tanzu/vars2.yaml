@@ -1,0 +1,3 @@
+NAME: harness_<+service.name>
+INSTANCE: 2
+ROUTE: harness_<+service.name>_<+infra.name>.apps.tas-harness.com

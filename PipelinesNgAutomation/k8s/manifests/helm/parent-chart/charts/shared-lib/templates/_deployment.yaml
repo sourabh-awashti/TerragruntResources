@@ -1,0 +1,25 @@
+{{- define "shared-lib.deployment" }}
+# apiVersion: {{ .Values.kubeApiVersion }}
+apiVersion: "apps/v1"
+kind: Deployment
+metadata:
+  name: {{ .Values.appName  }}
+  # name: "first-child"
+spec:
+  replicas: {{ .Values.replicaCount  }}
+  # replicas: 1
+  selector:
+    matchLabels:
+      app: "first-child"
+  template:
+    metadata:
+      labels:
+        app: "first-child"
+    spec:
+      # serviceAccountName: "first-child"
+      securityContext:
+        {}
+      containers:
+        - name: harness-example
+          image: registry.hub.docker.com/harness/todolist-sample:latest    
+{{- end }}

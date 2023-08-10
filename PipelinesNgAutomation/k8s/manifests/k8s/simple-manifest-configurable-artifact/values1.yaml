@@ -1,0 +1,9 @@
+name: marko-example
+replicas: 1
+
+image: <+artifact.image>
+pullPolicy: Always
+dockercfg: <+artifact.imagePullSecret>
+
+createNamespace: false
+namespace: <+infra.namespace>

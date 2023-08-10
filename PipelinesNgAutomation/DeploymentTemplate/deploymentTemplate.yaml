@@ -1,0 +1,53 @@
+template:
+  name: Ng-manager
+  identifier: Ngmanager
+  versionLabel: V1
+  type: CustomDeployment
+  projectIdentifier: kubernetesdeployment
+  orgIdentifier: default
+  tags: {}
+  spec:
+    infrastructure:
+      variables:
+        - name: DeploymentName
+          type: String
+          value: ng-manager
+          description: Name of the Deployment
+        - name: Kubernetes_connector
+          type: Connector
+          value: ""
+          description: K8s connector to connect to the infrastructure
+        - name: GitToken
+          type: Secret
+          value: GitToken
+          description: GitToken to fetch manifest files
+        - name: Namespace
+          type: String
+          value: default
+          description: ""
+        - name: Replicas
+          type: Number
+          value: 1
+          description: Replicas for the Instance
+        - name: Cluster
+          type: String
+          value: gke_qa-target_us-central1-a_qa-target-ng
+          description: ""
+      fetchInstancesScript:
+        store:
+          type: Inline
+          spec:
+            content: INSTANCE_OUTPUT_PATH=$(kubectl get pods --namespace=<+infra.variables.Namespace> -l=app=<+infra.variables.DeploymentName> -o json)
+      instanceAttributes:
+        - name: instancename
+          jsonPath: metadata.name
+          description: Pod Name
+        - name: Namespace
+          jsonPath: metadata.namespace
+          description: Namespace
+      instancesListPath: items
+    execution:
+      stepTemplateRefs:
+        - setup
+        - rollingdeploy
+        - DeployK8sapplication

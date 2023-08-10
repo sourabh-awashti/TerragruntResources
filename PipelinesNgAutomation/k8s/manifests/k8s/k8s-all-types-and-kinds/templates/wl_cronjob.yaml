@@ -1,0 +1,33 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{.Values.name}}-cronjob
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          imagePullSecrets:
+            - name: {{.Values.name}}-dockercfg
+          containers:
+            - name: {{.Values.name}}
+              image: {{.Values.image}}
+              imagePullPolicy: IfNotPresent
+              command:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes cluster
+          restartPolicy: OnFailure

@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kustomize-revision-test-cm
+data:
+  revision: "invalid"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomize-revision-test-deployment
+  labels:
+    app: kustomize-revision-test-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kustomize-revision-test-nginx
+  template:
+    metadata:
+      labels:
+        app: kustomize-revision-test-nginx
+        revision: "kustomize-revision-test"
+    spec:
+      containers:
+      - name: nginx
+        env:
+        - name: REVISION_NUMBER
+          valueFrom:
+            configMapKeyRef:
+              name: kustomize-revision-test-cm
+              key: "revision"
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          exec:
+            command: [sh, -c, "[ $REVISION_NUMBER -eq 0x42 ] && exit 0 || exit 1"] # expect to fail without proper patch
+          initialDelaySeconds: 1
+          periodSeconds: 10

@@ -1,0 +1,12 @@
+global:
+  appName: utility
+
+service:
+  port: 80
+  type: ClusterIP
+
+deployment:
+  container:
+    image: no-image
+    name: no-container-name
+    port: 80

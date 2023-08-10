@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}-deployment-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-1
+  template:
+    metadata:
+      labels:
+        app: app-1
+    spec:
+      initContainers:
+      - name: delay
+        image: busybox
+        command: ['sh', '-c', {{ .Values.command }}]
+      containers:
+      - name: container-1
+        image: {{ .Values.image }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}-deployment-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-2
+  template:
+    metadata:
+      labels:
+        app: app-2
+    spec:
+      initContainers:
+      - name: delay
+        image: busybox
+        command: ['sh', '-c', {{ .Values.command }}]
+      containers:
+      - name: container-2
+        image: {{ .Values.image }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}-deployment-3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-3
+  template:
+    metadata:
+      labels:
+        app: app-3
+    spec:
+      initContainers:
+      - name: delay
+        image: busybox
+        command: ['sh', '-c', {{ .Values.command }}]
+      containers:
+      - name: container-3
+        image: {{ .Values.image }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}-deployment-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-4
+  template:
+    metadata:
+      labels:
+        app: app-4
+    spec:
+      initContainers:
+      - name: delay
+        image: busybox
+        command: ['sh', '-c', {{ .Values.command }}]
+      containers:
+      - name: container-4
+        image: {{ .Values.image }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}-deployment-5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-5
+  template:
+    metadata:
+      labels:
+        app: app-5
+    spec:
+      initContainers:
+      - name: delay
+        image: busybox
+        command: ['sh', '-c', {{ .Values.command }}]
+      containers:
+      - name: container-5
+        image: {{ .Values.image }}

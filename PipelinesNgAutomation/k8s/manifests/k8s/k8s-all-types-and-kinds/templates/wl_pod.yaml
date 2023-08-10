@@ -1,0 +1,28 @@
+# https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{.Values.name}}-pod
+  labels:
+    environment: production
+    app: nginx
+    podlabel: {{.Values.name}}-pod
+spec:
+  imagePullSecrets:
+    - name: {{.Values.name}}-dockercfg
+  containers:
+    - name: {{.Values.name}}-container
+      image: {{.Values.image}}
+      ports:
+        - containerPort: 80

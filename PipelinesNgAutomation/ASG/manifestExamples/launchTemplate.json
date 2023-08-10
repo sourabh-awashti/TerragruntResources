@@ -1,0 +1,6 @@
+{
+  "LaunchTemplateData": {
+    "InstanceType": "t2.micro",
+    "KeyName": "vit-cd-play"
+  }
+}

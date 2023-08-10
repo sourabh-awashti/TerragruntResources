@@ -1,0 +1,13 @@
+launchType: FARGATE
+serviceName: <+pipeline.stages.ecs.spec.serviceConfig.serviceDefinition.spec.variables.serviceName>
+desiredCount: <+pipeline.stages.ecs.spec.serviceConfig.serviceDefinition.spec.variables.desiredCount>
+networkConfiguration:
+  awsvpcConfiguration:
+    securityGroups:
+    - sg-afc848e7 
+    subnets:
+    - subnet-9757dc98
+    assignPublicIp: ENABLED 
+deploymentConfiguration:
+  maximumPercent: 100
+  minimumHealthyPercent: 0

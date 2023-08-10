@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  annotations:
+    harness.io/managed: "true"
+  name: {{.Values.name}}-destinationrule
+spec:
+  host: {{.Values.name}}-svc
+  trafficPolicy:
+    loadBalancer:
+      simple: RANDOM

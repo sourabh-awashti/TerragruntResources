@@ -1,0 +1,18 @@
+pipeline:
+  name: rohan
+  identifier: rohan
+  projectIdentifier: GitEx
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Deploy
+        identifier: Deploy
+        template:
+          templateRef: Deploy
+          versionLabel: "1.1"
+          gitBranch: naman-test
+          templateInputs:
+            spec:
+              service:
+                serviceInputs: <+input>

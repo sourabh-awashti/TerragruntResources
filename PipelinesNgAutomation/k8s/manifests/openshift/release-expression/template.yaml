@@ -1,0 +1,65 @@
+
+apiVersion: v1
+kind: Template
+metadata:
+  name: release-expression-template
+  annotations:
+    description: "Release expression"
+    tags: "release-expression"
+objects:
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: ${NAME}-cm
+  data:
+    revision: "${REVISION}"
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ${NAME}-deployment
+    labels:
+      app: ${NAME}-nginx
+      revision: "${REVISION}"
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: ${NAME}-nginx
+    template:
+      metadata:
+        labels:
+          app: ${NAME}-nginx
+          revision: "${REVISION}"
+      spec:
+        containers:
+        - name: nginx
+          env:
+          - name: REVISION_NUMBER
+            valueFrom:
+              configMapKeyRef:
+                name: ${NAME}-cm
+                key: "revision"
+          image: nginx:1.14.2
+          ports:
+          - containerPort: 80
+          readinessProbe:
+            exec:
+              command: [sh, -c, "[ $REVISION_NUMBER -eq ${REVISION} ] && exit 0 || exit 1"]
+            initialDelaySeconds: 1
+            periodSeconds: 10
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: ${NAME}-service
+  spec:
+    selector:
+      app: ${NAME}-nginx
+    ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+parameters:
+- description: Deployment Name
+  name: NAME
+- description: Revision number
+  name: REVISION

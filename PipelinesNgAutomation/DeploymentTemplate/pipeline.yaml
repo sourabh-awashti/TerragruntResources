@@ -1,0 +1,97 @@
+pipeline:
+  name: Ng-manager
+  identifier: Ngmanager
+  projectIdentifier: kubernetesdeployment
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ng-manager-dev
+        identifier: ngmanagerdev
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: CustomDeployment
+          customDeploymentRef:
+            templateRef: Ngmanager
+            versionLabel: V1
+          execution:
+            steps:
+              - step:
+                  name: setup
+                  identifier: setup
+                  template:
+                    templateRef: setup
+                    versionLabel: v1
+              - step:
+                  name: rolling-deploy
+                  identifier: rollingdeploy
+                  template:
+                    templateRef: rollingdeploy
+                    versionLabel: V1
+              - step:
+                  name: Fetch Instances
+                  identifier: fetchInstances
+                  type: FetchInstanceScript
+                  timeout: 10m
+                  spec:
+                    delegateSelectors:
+                      - kubernetes-delegate
+                  failureStrategies: []
+            rollbackSteps: []
+          service:
+            serviceRef: NgManager
+            serviceInputs:
+              serviceDefinition:
+                type: CustomDeployment
+                spec:
+                  artifacts:
+                    primary:
+                      type: DockerRegistry
+                      spec:
+                        tag: <+input>
+                  variables:
+                    - name: ManifestFilePath
+                      type: String
+                      value: <+input>
+                    - name: GitRepository
+                      type: String
+                      value: <+input>
+                    - name: GitUrl
+                      type: String
+                      value: <+input>
+          environment:
+            environmentRef: dev
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: ngmanagerdev
+                inputs:
+                  identifier: ngmanagerdev
+                  type: CustomDeployment
+                  spec:
+                    variables:
+                      - name: DeploymentName
+                        type: String
+                        value: <+input>
+                      - name: Kubernetes_connector
+                        type: Connector
+                        value: <+input>
+                      - name: GitToken
+                        type: Secret
+                        value: <+input>
+                      - name: Namespace
+                        type: String
+                        value: <+input>
+                      - name: Replicas
+                        type: Number
+                        value: <+input>
+                      - name: Cluster
+                        type: String
+                        value: <+input>
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback

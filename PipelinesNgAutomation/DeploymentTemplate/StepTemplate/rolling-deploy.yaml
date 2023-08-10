@@ -1,0 +1,30 @@
+template:
+  name: rolling-deploy
+  type: Step
+  projectIdentifier: kubernetesdeployment
+  orgIdentifier: default
+  spec:
+    type: ShellScript
+    timeout: 10m
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: |-
+            export KUBECONFIG=${HARNESS_KUBE_CONFIG_PATH}
+            curl -H "Authorization: token <+infra.variables.GitToken>"  -H "Accept: application/vnd.github+json"  <+serviceVariables.GitUrl>/<+serviceVariables.GitRepository>/contents/<+serviceVariables.ManifestFilePath> | jq -r ".content" | base64 --decode > deployment.yaml
+            sed -i 's/$Deployment_Name/<+infra.variables.DeploymentName>/g' deployment.yaml
+            sed -i 's#$Image#<+artifacts.primary.image>#g' deployment.yaml
+            sed -i 's/$Namespace/<+infra.variables.Namespace>/g' deployment.yaml
+            sed -i 's/$Replicas/<+infra.variables.Replicas>/g' deployment.yaml
+
+            cat deployment.yaml
+            kubectl apply -f deployment.yaml --namespace=<+infra.variables.Namespace>
+      environmentVariables: []
+      outputVariables: []
+      delegateSelectors:
+        - kubernetes-delegate
+  identifier: rollingdeploy
+  versionLabel: V1

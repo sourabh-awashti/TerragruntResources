@@ -1,0 +1,13 @@
+function:
+  name: <+stage.variables.functionName>
+  buildConfig:
+    runtime: <+stage.variables.runtime>
+    entryPoint: hello_get
+  serviceConfig:
+    timeoutSeconds: 60
+    maxInstanceCount: <+stage.variables.maxInstance>
+    minInstanceCount: <+stage.variables.minInstance>
+    ingressSettings: ALLOW_ALL
+    availableMemory: <+stage.variables.memory>
+    maxInstanceRequestConcurrency: 1
+    availableCpu: <+stage.variables.cpu>

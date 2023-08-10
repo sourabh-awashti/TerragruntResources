@@ -1,0 +1,17 @@
+ {
+"function":{
+  "name": "<+serviceVariables.functionName>",
+  "buildConfig": {
+    "runtime": "<+serviceVariables.runtime>",
+    "entryPoint": "<+serviceVariables.entryPoint>"
+  },
+  "serviceConfig": {
+    "timeoutSeconds": 70,
+    "maxInstanceCount": <+serviceVariables.maxInstance>,
+    "ingressSettings": "ALLOW_ALL",
+    "availableMemory": "<+serviceVariables.memory>",
+    "maxInstanceRequestConcurrency": 1,
+    "availableCpu": "<+serviceVariables.cpu>"
+  }
+}
+}    

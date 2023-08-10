@@ -1,0 +1,9 @@
+{
+  "function": {
+    "name": "<+serviceVariables.functionName>",
+    "runtime": "dotnet6",
+    "entryPoint": "HelloWorld.Function",
+    "httpsTrigger":
+      "securityLevel": SECURE_OPTIONAL
+  }
+}

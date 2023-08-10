@@ -1,0 +1,6 @@
+resources:
+  - issuer.yaml
+  - ingress.yaml
+namePrefix: staging-
+configurations:
+  - issuer-kustomize-config.yaml

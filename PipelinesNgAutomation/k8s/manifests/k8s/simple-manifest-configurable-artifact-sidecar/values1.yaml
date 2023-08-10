@@ -1,0 +1,15 @@
+name: marko-example
+replicas: 1
+
+image: <+artifact.image>
+pullPolicy: Always
+dockercfg: <+artifact.imagePullSecret>
+
+sidecar:
+  image: <+artifacts.sidecars.markosidecar1.image>
+  pullPolicy: Always
+  dockercfg: <+artifacts.sidecars.markosidecar1.imagePullSecret>
+
+
+createNamespace: false
+namespace: <+infra.namespace>

@@ -1,0 +1,8 @@
+NAME=<+stage.variables.resourceNamePrefix>
+IMAGE=<+artifacts.primary.image>
+DOCKER_CFG=<+artifacts.primary.imagePullSecret>
+REPLICAS=<+stage.variables.replicas>
+MINREPLICAS="1"
+MAXREPLICAS="10"
+CPUUTILLIMT="50"
+MINAVAILABLE="1"

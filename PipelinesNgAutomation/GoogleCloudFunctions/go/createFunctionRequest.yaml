@@ -1,0 +1,5 @@
+function:
+  name: gcf-go-helloworld-automation
+  buildConfig:
+    runtime: go119
+    entryPoint: HelloGet

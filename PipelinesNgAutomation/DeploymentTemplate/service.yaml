@@ -1,0 +1,27 @@
+service:
+  name: Ng-Manager
+  identifier: NgManager
+  tags: {}
+  serviceDefinition:
+    spec:
+      customDeploymentRef:
+        templateRef: Ngmanager
+        versionLabel: V1
+      artifacts:
+        primary:
+          spec:
+            connectorRef: Dockerconnector
+            imagePath: library/nginx
+            tag: <+input>
+          type: DockerRegistry
+      variables:
+        - name: ManifestFilePath
+          type: String
+          value: <+input>
+        - name: GitRepository
+          type: String
+          value: <+input>
+        - name: GitUrl
+          type: String
+          value: <+input>
+    type: CustomDeployment

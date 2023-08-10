@@ -1,0 +1,101 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: test-manifests
+  annotations:
+    description: "Sample manifests description"
+objects:
+  - apiVersion: v1
+    kind: Secret
+    metadata:
+      annotations:
+        harness.io/skip-versioning: 'true'
+      name: ${NAME}-dockercfg
+    type: kubernetes.io/dockercfg
+    data:
+      .dockercfg: ${DOCKER_CFG}
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: ${NAME}
+    data:
+      key1: value1
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: ${NAME}-config
+    data:
+      hello: world
+  - apiVersion: apps.openshift.io/v1
+    kind: DeploymentConfig
+    metadata:
+      name: ${NAME}-deploymentconfig
+    spec:
+      replicas: ${{REPLICAS}}
+      selector:
+          app: ${NAME}
+      triggers:
+        - type: ConfigChange
+      template:
+        metadata:
+          labels:
+            app: ${NAME}
+        spec:
+          imagePullSecrets:
+            - name: ${NAME}-dockercfg
+          containers:
+            - name: ${NAME}
+              image: ${IMAGE}
+              envFrom:
+                - configMapRef:
+                    name: ${NAME}-config
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: ${NAME}-svc
+    spec:
+      type: LoadBalancer
+      ports:
+        - port: 80
+          targetPort: 80
+          protocol: TCP
+      selector:
+        app: ${NAME}
+  - apiVersion: autoscaling/v1
+    kind: HorizontalPodAutoscaler
+    metadata:
+      name: ${NAME}-hpa
+    spec:
+      scaleTargetRef:
+        apiVersion: apps.openshift.io/v1
+        kind: DeploymentConfig
+        name: ${NAME}-deploymentconfig
+      minReplicas: ${{MINREPLICAS}}
+      maxReplicas: ${{MAXREPLICAS}}
+      targetCPUUtilizationPercentage: ${{CPUUTILLIMT}}
+  - apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    metadata:
+      name: ${NAME}-pdb
+    spec:
+      minAvailable: ${{MINAVAILABLE}}
+      selector:
+        matchLabels:
+          app: ${NAME}
+parameters:
+  - name: NAME
+    value: test-deploy-ansh
+  - name: IMAGE
+    value: nginx:latest
+  - name: DOCKER_CFG
+    value: eyJodHRwczovL2luZGV4LmRvY2tlci5pby92Mi8iOnsidXNlcm5hbWUiOiJkb2NrZXJjaXJlYWQiLCJwYXNzd29yZCI6IkQwY2tlckhAcm5lJCRDaVJlYWQhIn19
+  - name: REPLICAS
+    value: "1"
+  - name: MINREPLICAS
+    value: "1"
+  - name: MAXREPLICAS
+    value: "30"
+  - name: CPUUTILLIMT
+    value: "80"
+  - name: MINAVAILABLE
+    value: "1"

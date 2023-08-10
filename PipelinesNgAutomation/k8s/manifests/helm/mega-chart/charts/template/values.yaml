@@ -1,0 +1,13 @@
+
+service:
+  type: ClusterIP
+  port: 80
+
+deployment:
+    container:
+      image: <+artifact.imagePath>
+      name: <+serviceVariables.serviceName>-container
+      port: 80
+
+global:
+  appName: <+stage.variables.resourcePrefix>-<+serviceVariables.serviceName>

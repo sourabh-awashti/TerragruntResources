@@ -1,0 +1,17 @@
+# https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{.Values.name}}-persistentvolume
+spec:
+  storageClassName: "manual"
+  capacity:
+    storage: 200Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/data1"
+  claimRef:
+    name: {{.Values.name}}-persistentvolumeclaim
+    namespace: {{.Values.namespace}}

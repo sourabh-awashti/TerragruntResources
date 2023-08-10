@@ -1,0 +1,10 @@
+{
+  "function": {
+    "name": "<+serviceVariables.functionName>",
+    "runtime": "<+serviceVariables.runtime>",
+    "entryPoint": "<+serviceVariables.entryPoint>",
+    "httpsTrigger":
+      "securityLevel": SECURE_OPTIONAL
+  }
+}
+

@@ -1,0 +1,7 @@
+applications:
+- name: ((NAME))
+  health-check-type: process
+  instances: 1
+  memory: <+secrets.getValue("memory")>
+  routes:
+    - route: ((ROUTE))

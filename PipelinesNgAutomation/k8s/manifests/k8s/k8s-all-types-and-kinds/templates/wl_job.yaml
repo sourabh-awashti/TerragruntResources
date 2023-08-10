@@ -1,0 +1,27 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/job/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{.Values.name}}-job
+spec:
+  template:
+    spec:
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
+      containers:
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
+          command: ["/bin/sh","-c","echo hello"]
+      restartPolicy: Never
+  backoffLimit: 4

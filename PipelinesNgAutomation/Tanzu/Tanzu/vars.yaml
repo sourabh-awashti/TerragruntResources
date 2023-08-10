@@ -1,0 +1,3 @@
+NAME: <+pipeline.variables.appName>
+INSTANCE: 1
+ROUTE: harness_<+env.variables.routePrefix>.apps.tas-harness.com

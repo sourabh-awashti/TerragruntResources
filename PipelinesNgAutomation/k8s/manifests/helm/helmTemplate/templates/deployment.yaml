@@ -1,0 +1,132 @@
+{{- if .Values.env.config}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.name}}
+data:
+{{.Values.env.config | toYaml | indent 2}}
+---
+{{- end -}}
+
+{{- if .Values.env.config}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: {{.Values.name}}-index
+data:
+{{index .Values.env "1" | mergeOverwrite .Values.env.config | toYaml | indent 2}}
+---
+{{- end}}
+
+{{- if .Values.env.config}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.name}}-range
+data:
+{{range $k, $v := .Values.env.config -}}
+{{$k | indent 2}}: {{$v | quote}}
+{{end}}
+---
+{{- end -}}
+
+{{define "K1"}} {{ .key1 }} {{end}}
+{{define "K2"}} {{ .key2 }} {{end}}
+{{- if .Values.env.config}}
+{{with .Values}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.name}}-template
+data:
+#   key1: {{template "K1" .env.config}}
+#   key2: {{template "K2" .env.config}}
+  key3: {{"\"output\""}}
+  key4: {{`"output"`}}
+  key5: {{printf "%q" "output"}}
+  key6: {{"output" | printf "%q"}}
+  key7: {{printf "%q" (print "out" "put")}}
+  key8: {{printf "%q" (print "out" "put")}}
+  key9: {{"put" | printf "%s%s" "out" | printf "%q"}}
+  key10: {{"output" | printf "%s" | printf "%q"}}
+  key11: {{with "output"}}{{printf "%q" .}}{{end}}
+  key12: {{with $x := "output" | printf "%q"}}{{$x}}{{end}}
+  key13: {{with $x := "output"}}{{printf "%q" $x}}{{end}}
+  key14: {{with $x := "output"}}{{$x | printf "%q"}}{{end}}
+  key15: {{.name | quote}}
+{{end}}
+---
+{{- end -}}
+
+{{- if .Values.env.secrets}}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{.Values.name}}
+stringData:
+{{.Values.env.secrets | toYaml | indent 2}}
+---
+{{- end}}
+
+{{- if .Values.dockercfg}}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+{{- end}}
+
+{{/* a comment */}}
+{{- /* a comment with white space trimmed from preceding and following text */ -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.name}}-deployment
+spec:
+  replicas: {{int .Values.replicas}}
+  minReadySeconds: {{int .Values.minReadySeconds}}
+  revisionHistoryLimit: {{.Values.revisionHistoryLimit}}
+  {{- if .Values.progressDeadlineSeconds }}
+  progressDeadlineSeconds: {{ .Values.progressDeadlineSeconds }}
+  {{ else }}
+  progressDeadlineSeconds: 480
+  {{ end }}
+  selector:
+    matchLabels:
+      app: {{.Values.name}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.name}}
+    spec:
+      {{- if .Values.dockercfg}}
+      imagePullSecrets:
+      - name: {{.Values.name}}-dockercfg
+      {{- end}}
+      containers:
+      - name: {{.Values.name}}
+        image: {{.Values.image}}
+        {{- if or .Values.env.config .Values.env.secrets}}
+        envFrom:
+        {{- if .Values.env.config}}
+        - configMapRef:
+            name: {{.Values.name}}
+        {{- end}}
+        {{- if .Values.env.secrets}}
+        - secretRef:
+            name: {{.Values.name}}
+        {{- end }}
+        {{- end }}
+  {{- if .Values.maxSurge }} 
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: {{.Values.maxSurge}}
+  {{- end}}
+{{- if .Values.env.config }} 
+{{- end -}} {{ if .Values.env.config }} {{ end -}}

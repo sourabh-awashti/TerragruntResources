@@ -1,0 +1,27 @@
+name: <+stage.variables.resourceNamePrefix>
+replicas: <+stage.variables.replicas>
+
+image: <+artifacts.primary.image>
+dockercfg: <+artifacts.primary.imagePullSecret>
+
+createNamespace: true
+namespace: <+infra.namespace>
+
+serviceType: ClusterIP
+
+servicePort: 80
+serviceTargetPort: 3000
+
+pdb:
+  minAvailable: 1
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
+
+env:
+  config:
+    key1: value1
+  secrets:
+    key2: value2

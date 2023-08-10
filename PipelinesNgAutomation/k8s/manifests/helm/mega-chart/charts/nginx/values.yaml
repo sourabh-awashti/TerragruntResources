@@ -1,0 +1,13 @@
+
+service:
+  type: ClusterIP
+  port: 80
+
+deployment:
+    container:
+      image: nginx:1.14.2
+      name: nginx-container
+      port: 80
+
+global:
+  appName: <+stage.variables.resourcePrefix>-nginx-service

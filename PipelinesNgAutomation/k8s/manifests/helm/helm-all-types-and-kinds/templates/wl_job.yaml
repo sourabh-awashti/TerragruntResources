@@ -1,0 +1,16 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/job/
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{.Values.name}}-job
+spec:
+  template:
+    spec:
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
+      containers:
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
+          command: ["/bin/sh","-c","echo hello"]
+      restartPolicy: Never
+  backoffLimit: 4

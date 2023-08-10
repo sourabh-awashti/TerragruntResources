@@ -1,0 +1,3 @@
+# Dummy file to play with the contents and fire repo events for triggers testing.
+# For example, this can be used to update this file & push, than check triggers functionality in Harness.
+test

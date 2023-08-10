@@ -1,0 +1,35 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{.Values.name}}-daemonset
+  namespace: {{.Values.namespace}}
+  annotations:
+    harness.io/direct-apply: "true"
+  labels:
+    k8s-app: {{.Values.name}}
+spec:
+  selector:
+    matchLabels:
+      name: {{.Values.name}}
+  template:
+    metadata:
+      labels:
+        name: {{.Values.name}}
+    spec:
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
+      containers:
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}

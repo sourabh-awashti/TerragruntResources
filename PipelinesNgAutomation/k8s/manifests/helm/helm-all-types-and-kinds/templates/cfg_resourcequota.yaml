@@ -1,0 +1,18 @@
+# https://kubernetes.io/docs/concepts/policy/resource-quotas/
+apiVersion: v1
+kind: List
+items:
+  - apiVersion: v1
+    kind: ResourceQuota
+    metadata:
+      name: {{.Values.name}}-resourcequota
+    spec:
+      hard:
+        cpu: "5"
+        memory: 10Gi
+        pods: "10"
+      scopeSelector:
+        matchExpressions:
+          - operator : In
+            scopeName: PriorityClass
+            values: ["{{.Values.name}}-priorityclass"]

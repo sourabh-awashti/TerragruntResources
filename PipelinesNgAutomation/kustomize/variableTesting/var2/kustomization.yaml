@@ -1,0 +1,35 @@
+resources:
+- job.yaml
+- rollout-demo.yaml
+- cm.yaml
+
+configurations:
+- name-reference.yaml
+
+namePrefix: anshul-
+
+replacements:
+- from:
+    value: nginx:newtag
+  to:
+    target:
+      name: anshul
+      kind: Deployment
+    fieldrefs:
+      - spec.template.spec.containers[name=nginx].image
+
+vars:
+- name: BACKEND_SERVICE_NAME
+  objref:
+    kind: Job
+    name: nginx-job
+    apiVersion: batch/v1
+  fieldref:
+    fieldpath: metadata.name
+- name: CONFIG_MAP
+  objref:
+    kind: ConfigMap
+    name: special-config
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.special-how

@@ -1,0 +1,26 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{.Values.name}}-statefulset
+spec:
+  selector:
+    matchLabels:
+      app: {{.Values.name}} # has to match .spec.template.metadata.labels
+  serviceName: "nginx"
+  replicas: 1 # by default is 1
+  minReadySeconds: 10 # by default is 0
+  template:
+    metadata:
+      labels:
+        app: {{.Values.name}} # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
+      containers:
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
+          ports:
+            - containerPort: 80
+              name: web

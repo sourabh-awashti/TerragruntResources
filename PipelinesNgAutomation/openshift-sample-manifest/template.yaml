@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: sample-manifests
+  annotations:
+    description: "Sample manifests description"
+    iconClass: "sample-manifests"
+    tags: "database,nosql"
+objects:
+- apiVersion: v1
+  kind: Secret
+  metadata:
+    annotations:
+      harness.io/skip-versioning: 'true'
+    name: ${NAME}-dockercfg
+  type: kubernetes.io/dockercfg
+  data:
+    .dockercfg: ${DOCKER_CFG}
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: ${NAME}
+  data:
+    key1: value1
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: ${NAME}-cm
+  data:
+    hello: world
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ${NAME}-deployment
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: ${NAME}
+    template:
+      metadata:
+        labels:
+          app: ${NAME}
+      spec:
+        imagePullSecrets:
+        - name: ${NAME}-dockercfg
+        containers:
+        - name: ${NAME}
+          image: ${IMAGE}
+          envFrom:
+          - configMapRef:
+              name: ${NAME}
+- apiVersion: v1  
+  kind: Service
+  metadata:
+    name: ${NAME}-svc
+  spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+    selector:
+      app: ${NAME}
+parameters:
+- name: NAME
+  value: test-deploy-ansh
+- name: IMAGE
+  value: nginx:latest
+- name: DOCKER_CFG
+  value: eyJodHRwczovL2luZGV4LmRvY2tlci5pby92Mi8iOnsidXNlcm5hbWUiOiJkb2NrZXJjaXJlYWQiLCJwYXNzd29yZCI6IkQwY2tlckhAcm5lJCRDaVJlYWQhIn19

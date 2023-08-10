@@ -1,0 +1,3 @@
+NAME=<+pipeline.name>
+IMAGE=<+artifact.image>
+DOCKER_CFG=<+artifact.imagePullSecret>

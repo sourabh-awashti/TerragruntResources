@@ -1,0 +1,11 @@
+apiVersion: v2
+name: mega-chart-nginx
+description: Nginx application
+
+version: 0.0.1
+type: application
+
+dependencies:
+  - name: utility
+    version: "1.0.0"
+    repository: file://../utility

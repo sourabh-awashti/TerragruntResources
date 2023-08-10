@@ -1,0 +1,118 @@
+pipeline:
+    name: ecs
+    identifier: ecs
+    projectIdentifier: sainath
+    orgIdentifier: default
+    storeType: ""
+    remoteType: create
+    tags: {}
+    stages:
+        - stage:
+              name: ecs
+              identifier: ecs
+              description: ""
+              type: Deployment
+              spec:
+                  serviceConfig:
+                      serviceDefinition:
+                          spec:
+                              manifests:
+                                  - manifest:
+                                        identifier: manifest m1
+                                        type: EcsTaskDefinition
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: github_conn
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - ECS/sample/RegisterTaskDefinitionRequest.yaml
+                                                    branch: main
+                                  - manifest:
+                                        identifier: manifest m2
+                                        type: EcsServiceDefinition
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: github_conn
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - ECS/sample/CreateServiceRequest.yaml
+                                                    branch: main
+                                  - manifest:
+                                        identifier: manifest m3
+                                        type: EcsScalableTargetDefinition
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: github_conn
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - ECS/sample/RegisterScalableTargetRequest.yaml
+                                                    branch: main
+                                  - manifest:
+                                        identifier: manifest m4
+                                        type: EcsScalingPolicyDefinition
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: github_conn
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - ECS/sample/PutScalingPolicyRequest.yaml
+                                                    branch: main
+                              artifacts:
+                                  primary:
+                                      spec:
+                                          connectorRef: sainath_docker
+                                          imagePath: library/nginx
+                                          tag: latest
+                                      type: DockerRegistry
+                              variables:
+                                  - name: serviceName
+                                    type: String
+                                    value: <+input>
+                                  - name: desiredCount
+                                    type: Number
+                                    value: <+input>
+                          type: ECS
+                      serviceRef: service_s1
+                  infrastructure:
+                      environmentRef: env_e1
+                      infrastructureDefinition:
+                          type: ECS
+                          spec:
+                              connectorRef: cdplay
+                              cluster: iam-serverless-test
+                              region: us-east-1
+                      allowSimultaneousDeployments: false
+                  execution:
+                      steps:
+                          - step:
+                                name: Ecs Rolling Deploy
+                                identifier: EcsRollingDeploy
+                                type: EcsRollingDeploy
+                                timeout: 5m
+                                spec: {}
+                      rollbackSteps: []
+              tags: {}
+              failureStrategies:
+                  - onFailure:
+                        errors:
+                            - AllErrors
+                        action:
+                            type: StageRollback
+              variables:
+                  - name: plugin
+                    type: Secret
+                    value: plugin
+                  - name: serviceName
+                    type: String
+                    value: crossAccWithManual
+                  - name: region
+                    type: Secret
+                    value: region

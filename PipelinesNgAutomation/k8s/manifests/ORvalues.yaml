@@ -1,0 +1,2 @@
+replicas: ${workflow.variables.replicas}
+image: ${workflow.variables.image}

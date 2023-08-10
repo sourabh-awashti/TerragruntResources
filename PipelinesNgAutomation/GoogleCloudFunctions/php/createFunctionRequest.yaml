@@ -1,0 +1,5 @@
+function:
+  name: gcf-php-helloworld-automation
+  buildConfig:
+    runtime: php81
+    entryPoint: helloGet

@@ -1,0 +1,6 @@
+function:
+  name: <+stage.variables.functionName>
+  runtime: <+stage.variables.runtime>
+  entryPoint: hello_get
+  httpsTrigger:
+    securityLevel: SECURE_OPTIONAL

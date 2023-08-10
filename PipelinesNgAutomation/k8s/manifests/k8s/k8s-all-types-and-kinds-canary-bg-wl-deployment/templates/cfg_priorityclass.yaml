@@ -1,0 +1,8 @@
+# https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: {{.Values.name}}-priorityclass
+value: 1000000
+globalDefault: false
+description: "Test Priority Class. This priority class should be used for XYZ service pods only."

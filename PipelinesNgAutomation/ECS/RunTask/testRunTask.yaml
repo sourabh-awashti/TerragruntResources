@@ -1,0 +1,9 @@
+launchType: FARGATE
+networkConfiguration:
+  awsvpcConfiguration:
+    securityGroups:
+    - sg-08ef5ca063a440404 
+    subnets:
+    - subnet-0f3f0ef96fbc46e46
+    assignPublicIp: ENABLED
+count: 1

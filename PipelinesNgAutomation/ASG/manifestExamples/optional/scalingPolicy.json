@@ -1,0 +1,5 @@
+{
+  "policyName": "testPolicy1",
+  "adjustmentType":"PercentChangeInCapacity",
+  "scalingAdjustment":30
+}
