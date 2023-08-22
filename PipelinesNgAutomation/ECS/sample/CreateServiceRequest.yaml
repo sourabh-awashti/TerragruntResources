@@ -4,16 +4,14 @@ desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
-    - sg-afc848e7 
+      - sg-afc848e7 
     subnets:
-    - subnet-9757dc98
+      - subnet-9757dc98
     assignPublicIp: ENABLED 
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
-ServiceConnectConfiguration: 
- enabled: true
- namespace: pragyesh-namespace-test
-  
-
+serviceConnectOptions: 
+  enabled: true
+  namespaceName: pragyesh-namespace-test
 
