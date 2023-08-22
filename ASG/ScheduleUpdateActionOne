@@ -1,0 +1,5 @@
+{
+  "scheduledActionName": "scheduledActionNameOne",
+  "startTime": "2030-03-30T08:00:00Z",
+  "desiredCapacity": 1
+}
