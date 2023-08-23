@@ -1,5 +1,5 @@
 qq: "qqqq"
-releaseTag: "k8s-v0.6"
+releaseTag: "k8s-v0.5"
 cluster:
   address: "https://35.233.139.33"
   name: "cluster11"
