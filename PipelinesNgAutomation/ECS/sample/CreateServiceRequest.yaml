@@ -11,7 +11,7 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
-ServiceConnectConfiguration: 
+serviceConnectConfiguration:
   Enabled: true
   Namespace: pragyesh-namespace-test
 
