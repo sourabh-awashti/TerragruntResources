@@ -1,0 +1,2688 @@
+featureFlags:
+  flags:
+  - flag:
+      name: asd
+      identifier: asd
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: mk
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rrerve
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newet
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: csd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ff
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: lo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: d
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: brb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wvewe
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: kj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: jik
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ki
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: h
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ervrb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wevw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecmeo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: iok
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: QA
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657624439561
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669775875
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669778780
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670215486
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670218131
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670427419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669211818
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668862979
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636428485
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636440606
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636445009
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474371182
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658393627644
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474589350
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475173956
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475440245
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475887508
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475549215
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475622802
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475703593
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485164259
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658479555684
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envName_1657832963580
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670828888
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newrr
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657953226766
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480568772
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480736356
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481628447
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481872230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482324974
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482390620
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472582919
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdstest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482535953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659381513133
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475795283
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658476020584
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658568090083
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658585840666
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fgt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485266451
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: erverv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668917311
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657962637419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: njj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619424969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619552185
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389539861
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658386850060
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389686324
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618960284
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619170279
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618138761
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618512992
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485660856
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485748985
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658402633230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394807530
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: v
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484468026
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: nimo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475956086
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472805370
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658320646146
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618865942
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319387021
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319484203
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670826339
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394217746
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdst
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657805518647
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670582212
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636426953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658473148859
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659379686864
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485050838
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658642798969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fghj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657877746127
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658301690465
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472639752
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668887845
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474500600
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670560656
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668920016
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669198953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670428624
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657876011882
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658487357282
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484581764
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658643761865
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658646409832
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484886260
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test345
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669431785
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658083390765
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669412099
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: dxs
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: f
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: gyhuj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fdesa
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: DESW
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sshdemoenvironment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: KubernetesEnvdemo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envdemo2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: k8sEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: ffff
+      identifier: ffff
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: mk
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rrerve
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newet
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: csd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ff
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: lo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: d
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: brb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wvewe
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: kj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: jik
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ki
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: h
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ervrb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wevw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecmeo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: iok
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: QA
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657624439561
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669775875
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669778780
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670215486
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670218131
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670427419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669211818
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668862979
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636428485
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636440606
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636445009
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474371182
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658393627644
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474589350
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475173956
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475440245
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475887508
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475549215
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475622802
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475703593
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485164259
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658479555684
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envName_1657832963580
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670828888
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newrr
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657953226766
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480568772
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480736356
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481628447
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481872230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482324974
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482390620
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472582919
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdstest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482535953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659381513133
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475795283
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658476020584
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658568090083
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658585840666
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fgt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485266451
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: erverv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668917311
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657962637419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: njj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619424969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619552185
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389539861
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658386850060
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389686324
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618960284
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619170279
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618138761
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618512992
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485660856
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485748985
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658402633230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394807530
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: v
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484468026
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: nimo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475956086
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472805370
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658320646146
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618865942
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319387021
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319484203
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670826339
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394217746
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdst
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657805518647
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670582212
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636426953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658473148859
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659379686864
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485050838
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658642798969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fghj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657877746127
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658301690465
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472639752
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668887845
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474500600
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670560656
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668920016
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669198953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670428624
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657876011882
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658487357282
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484581764
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658643761865
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658646409832
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484886260
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test345
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669431785
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658083390765
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669412099
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: dxs
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: f
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: gyhuj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fdesa
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: DESW
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sshdemoenvironment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: KubernetesEnvdemo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envdemo2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: k8sEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: fvcd
+      identifier: fvcd
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: mk
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rrerve
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newet
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: csd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ff
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: lo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: d
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: brb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wvewe
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: kj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: jik
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ki
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: h
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ervrb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wevw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecmeo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: iok
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: QA
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657624439561
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669775875
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669778780
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670215486
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670218131
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670427419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669211818
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668862979
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636428485
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636440606
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636445009
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474371182
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658393627644
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474589350
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475173956
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475440245
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475887508
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475549215
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475622802
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475703593
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485164259
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658479555684
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envName_1657832963580
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670828888
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newrr
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657953226766
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480568772
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480736356
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481628447
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481872230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482324974
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482390620
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472582919
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdstest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482535953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659381513133
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475795283
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658476020584
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658568090083
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658585840666
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fgt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485266451
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: erverv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668917311
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657962637419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: njj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619424969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619552185
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389539861
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658386850060
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389686324
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618960284
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619170279
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618138761
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618512992
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485660856
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485748985
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658402633230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394807530
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: v
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484468026
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: nimo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475956086
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472805370
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658320646146
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618865942
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319387021
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319484203
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670826339
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394217746
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdst
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657805518647
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670582212
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636426953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658473148859
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659379686864
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485050838
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658642798969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fghj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657877746127
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658301690465
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472639752
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668887845
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474500600
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670560656
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668920016
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669198953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670428624
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657876011882
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658487357282
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484581764
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658643761865
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658646409832
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484886260
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test345
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669431785
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658083390765
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669412099
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: dxs
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: f
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: gyhuj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fdesa
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: DESW
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sshdemoenvironment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: KubernetesEnvdemo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envdemo2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: k8sEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: nm
+      identifier: nm
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: mk
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rrerve
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newet
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: csd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ff
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: lo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: d
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: brb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wvewe
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: kj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: jik
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ki
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: h
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ervrb
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: wevw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecmeo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: iok
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: QA
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657624439561
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669775875
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669778780
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670215486
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670218131
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670427419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669211818
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668862979
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636428485
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636440606
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636445009
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474371182
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658393627644
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474589350
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475173956
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475440245
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475887508
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475549215
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475622802
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475703593
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485164259
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658479555684
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envName_1657832963580
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670828888
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: newrr
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657953226766
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480568772
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658480736356
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481628447
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658481872230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482324974
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482390620
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472582919
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdstest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: ecw
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658482535953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659381513133
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475795283
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658476020584
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658568090083
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658585840666
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fgt
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485266451
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: erverv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668917311
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657962637419
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: njj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619424969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619552185
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389539861
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658386850060
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658389686324
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618960284
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657619170279
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618138761
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618512992
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485660856
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485748985
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658402633230
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394807530
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: v
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484468026
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: nimo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658475956086
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472805370
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658320646146
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657618865942
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319387021
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658319484203
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670826339
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658394217746
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: cdst
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657805518647
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670582212
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657636426953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658473148859
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1659379686864
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658485050838
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658642798969
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fghj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657877746127
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658301690465
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658472639752
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668887845
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658474500600
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670560656
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657668920016
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669198953
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657670428624
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657876011882
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658487357282
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484581764
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658643761865
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658646409832
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658484886260
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test345
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669431785
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1658083390765
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sample_environment_1657669412099
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: dxs
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: f
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: gyhuj
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: fdesa
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: DESW
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sshdemoenvironment
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: KubernetesEnvdemo
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: envdemo2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: k8sEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  projectIdentifier: Jira
+  orgIdentifier: default
