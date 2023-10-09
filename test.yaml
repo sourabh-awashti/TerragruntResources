@@ -671,6 +671,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "on"
+      - identifier: env1_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
   - flag:
       name: ffff
       identifier: ffff
@@ -1338,6 +1343,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env1_ssh
         default:
           onVariation: "true"
           offVariation: "false"
@@ -2013,6 +2023,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: env1_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
   - flag:
       name: nm
       identifier: nm
@@ -2680,6 +2695,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: test_ssh
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env1_ssh
         default:
           onVariation: "true"
           offVariation: "false"
