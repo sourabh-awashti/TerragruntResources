@@ -1,0 +1,18 @@
+Parameters:
+  name:
+    Type: 'String'
+  KeyName:
+    Type: 'String'
+  VpcId:
+    Type: 'String'
+  ImageId:
+    Type: 'String'
+  Sname:
+    Type: 'String'
+Resources: 
+  SMS3JIZ4:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties: {}
+Outputs:
+  region:
+    Value: !Ref AWS::Region
