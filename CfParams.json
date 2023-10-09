@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "rsingh-playground"
+  }, 
+  {
+    "ParameterKey": "ImageId",
+    "ParameterValue": "ami-040ba316fc6ab09df"
+  }
+]
